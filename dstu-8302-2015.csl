@@ -13,7 +13,6 @@
   </info>
   <locale>
     <terms>
-      <term name="et-al-none"/>
       <term name="editor">ред. </term>
       <term name="et-al"> та ін.</term>
       <term name="page" form="short">
@@ -51,18 +50,15 @@
         </names>
       </substitute>
     </names>
-    <text/>
   </macro>
   <macro name="translator">
     <names variable="translator">
-      <label variable="translator" form="short"/>
       <name name-as-sort-order="all" sort-separator=" " initialize-with=". " et-al-min="5" et-al-use-first="3"/>
       <et-al term="et-al"/>
     </names>
   </macro>
   <macro name="editor">
     <names variable="editor">
-      <label variable="editor" form="short"/>
       <name name-as-sort-order="all" sort-separator=" " initialize-with=". " et-al-min="5" et-al-use-first="3" delimiter-precedes-last="never"/>
       <et-al term="et-al"/>
     </names>
@@ -87,7 +83,6 @@
       <date-part name="year" range-delimiter=". "/>
     </date>
   </macro>
-  <macro name="valid-since"/>
   <macro name="volume">
     <label variable="volume" form="short"/>
     <text variable="volume"/>
@@ -193,7 +188,6 @@
           </date>
         </else-if>
         <else-if type="legislation bill" match="any">
-          <text macro="author-first" suffix=" "/>
           <group delimiter=". ">
             <group delimiter=" ">
               <text macro="section-title"/>
