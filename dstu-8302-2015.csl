@@ -103,10 +103,11 @@
     <text variable="DOI" prefix="DOI: https://doi.org/"/>
   </macro>
   <macro name="assessed-date">
-    <date form="numeric" variable="accessed" prefix="(дата звернення: " suffix=")">
+    <date variable="accessed" prefix="(дата звернення: " suffix=")">
       <date-part name="day" form="numeric-leading-zeros"/>
-      <date-part name="month" form="numeric-leading-zeros"/>
-      <date-part name="year"/>
+          <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+          <date-part name="month" form="numeric-leading-zeros" suffix="."/>
+          <date-part name="year"/>
     </date>
   </macro>
   <citation collapse="citation-number">
@@ -193,10 +194,10 @@
               <text macro="section-title"/>
               <group delimiter=" : ">
                 <text variable="number"/>
-                <date form="numeric" variable="issued" prefix="станом на " suffix=" р.">
-                  <date-part name="day" form="numeric-leading-zeros"/>
-                  <date-part name="month" form="numeric-leading-zeros"/>
-                  <date-part name="year" form="long"/>
+                <date variable="issued" prefix="станом на " suffix=" р.">
+                  <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+                  <date-part name="month" form="numeric-leading-zeros" suffix="."/>
+                  <date-part name="year"/>
                 </date>
               </group>
             </group>
@@ -214,9 +215,9 @@
             <text variable="URL" prefix="URL: "/>
             <choose>
               <if match="any" variable="accessed">
-                <date form="text" variable="accessed" prefix="(дата звернення: " suffix=")">
-                  <date-part name="day" form="numeric-leading-zeros"/>
-                  <date-part name="month" form="numeric-leading-zeros"/>
+                <date variable="accessed" prefix="(дата звернення: " suffix=")">
+                  <date-part name="day" form="numeric-leading-zeros" suffix="."/>
+                  <date-part name="month" form="numeric-leading-zeros" suffix="."/>
                   <date-part name="year"/>
                 </date>
               </if>
