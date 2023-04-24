@@ -104,8 +104,8 @@
   </macro>
   <macro name="assessed-date">
     <date form="numeric" variable="accessed" prefix="(дата звернення: " suffix=")">
-      <date-part name="day" form="numeric-leading-zeros" suffix="."/>
-      <date-part name="month" form="numeric-leading-zeros" suffix="."/>
+      <date-part name="day" form="numeric-leading-zeros"/>
+      <date-part name="month" form="numeric-leading-zeros"/>
       <date-part name="year"/>
     </date>
   </macro>
@@ -194,8 +194,8 @@
               <group delimiter=" : ">
                 <text variable="number"/>
                 <date form="numeric" variable="issued" prefix="станом на " suffix=" р.">
-                  <date-part name="day" form="numeric-leading-zeros" suffix="."/>
-                  <date-part name="month" form="numeric-leading-zeros" suffix="."/>
+                  <date-part name="day" form="numeric-leading-zeros"/>
+                  <date-part name="month" form="numeric-leading-zeros"/>
                   <date-part name="year" form="long"/>
                 </date>
               </group>
@@ -215,8 +215,8 @@
             <choose>
               <if match="any" variable="accessed">
                 <date form="text" variable="accessed" prefix="(дата звернення: " suffix=")">
-                  <date-part name="day" form="numeric-leading-zeros" suffix="."/>
-                  <date-part name="month" form="numeric-leading-zeros" suffix="."/>
+                  <date-part name="day" form="numeric-leading-zeros"/>
+                  <date-part name="month" form="numeric-leading-zeros"/>
                   <date-part name="year"/>
                 </date>
               </if>
